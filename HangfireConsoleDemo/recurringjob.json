@@ -1,0 +1,31 @@
+﻿[
+	{
+		"job-name": "My Job1",
+		"job-type": "HangfireConsoleDemo.MyJob1, HangfireConsoleDemo",
+		"cron-expression": "*/1 * * * *",
+		"timezone": "China Standard Time",
+		"queue": "jobs"
+	},
+	{
+		"job-name": "My Job2",
+		"job-type": "HangfireConsoleDemo.MyJob2, HangfireConsoleDemo",
+		"cron-expression": "*/5 * * * *",
+		"job-data": {
+			"IntVal": 1,
+			"StringVal": "abcdef",
+			"BooleanVal": true,
+			"SimpleObject": {
+				"Name": "Foo",
+				"Age": 100
+			}
+		}
+	},
+	{
+		"job-name": "Long Running Job",
+		"job-type": "HangfireConsoleDemo.LongRunningJob, HangfireConsoleDemo",
+		"cron-expression": "*/2 * * * *",
+		"job-data": {
+			"RunningTimes": 300
+		}
+	}
+]
